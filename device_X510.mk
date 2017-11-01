@@ -1,3 +1,5 @@
+
+
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
@@ -24,12 +26,12 @@ persist.sys.display.clearMotion=0
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
-$(call inherit-product-if-exists, vendor/Homtom/HT16/HT16-vendor.mk)
+$(call inherit-product-if-exists, vendor/Infinix/X510/HT16-vendor.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/Homtom/HT16/overlay
-PRODUCT_PACKAGE_OVERLAYS += device/Homtom/HT16/overlay # enable this to be able overlay a default wallpaper
+DEVICE_PACKAGE_OVERLAYS += device/Infinix/X510/overlay
+PRODUCT_PACKAGE_OVERLAYS += device/Infinix/X510/overlay # enable this to be able overlay a default wallpaper
 
-LOCAL_PATH := device/Homtom/HT16
+LOCAL_PATH := device/Infinix/X510
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 	LOCAL_KERNEL := $(LOCAL_PATH)/kernel
 else
